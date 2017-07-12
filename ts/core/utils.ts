@@ -1,9 +1,11 @@
 import optionAPI from '../api/option';
+import random from './random';
 
 const RandExp = require('randexp');
 
 // set maximum default, see #193
 RandExp.prototype.max = 10;
+RandExp.prototype.randInt = random.getRandom;
 
 function _randexp(value: string) {
   var re = new RandExp(value);
